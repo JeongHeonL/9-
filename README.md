@@ -2,8 +2,96 @@
 #### main.dart
 <pre>
 <code>
+import 'package:flutter/material.dart';
+import 'package:w9_w7ui123/page1.dart';
+import 'package:w9_w7ui123/page2.dart';
+import 'package:w9_w7ui123/page3.dart';
+
+final imageitem = [
+  'https://cdn.pixabay.com/photo/2019/11/25/16/15/sfari-4652364_1280.jpg',
+  'https://cdn.pixabay.com/photo/2019/10/30/15/33/tajikistan-4589831_1280.jpg',
+  'https://cdn.pixabay.com/photo/2018/11/12/18/44/thanksgiving-3811492_1280.jpg'
+];
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: '복잡한 UI 작성',
+      theme: ThemeData(
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+      ),
+      home: const MyHomePage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  var _index = 0;
+  final _pages = [
+    Page1(),
+    Page2(),
+    Page3(),
+  ];
+
+
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: 
+        Text('복잡한 UI 페이지', 
+        style:TextStyle(color:Colors.black)),
+        centerTitle: true,
+
+        actions: [
+          IconButton(onPressed: () {}, 
+          icon: Icon(Icons.add,color: Colors.black),
+          ),
+        ],
+      ),
+    
+      body: _pages[_index],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _index,
+          onTap: (index) {
+          setState((){
+            _index = index;
+          });
+  },
+        items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: '홈'),
+        BottomNavigationBarItem(icon: Icon(Icons.assignment), label: '이용서비스'),
+        BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: '내 정보'),
+      ]),
+    );
+
+  }
+}
+
+</code>
+</pre>
+
+<code>
   import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:w9_w7ui123/main.dart';
 
@@ -103,7 +191,6 @@ class Page1 extends StatelessWidget{
   }
   }
 </code>
-</pre>
 
 값(데이터)과 값을 화면에 표현하는 로직을 구분하여 구현하는 것이 왜중요한가? :
 <br>
