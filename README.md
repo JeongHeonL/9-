@@ -90,6 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
 </code>
 </pre>
 
+<pre>
 <code>
   import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -191,6 +192,7 @@ class Page1 extends StatelessWidget{
   }
   }
 </code>
+      </pre>
 
 값(데이터)과 값을 화면에 표현하는 로직을 구분하여 구현하는 것이 왜중요한가? :
 <br>
