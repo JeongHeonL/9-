@@ -212,14 +212,10 @@ class Page1 extends StatelessWidget{
 <br>
 <예시>
 <code>
-// 예시: 별도의 데이터 파일 또는 Page1 클래스 외부
-final List<String> carServiceTypes = ['대리', '택시', '똑타', '자가용'];
-final List<String> carModels = ['아반떼', '소나타', 'sm5', '제네시스'];
-// 이미지 URL 리스트도 마찬가지로 외부에 정의 (현재 main.dart에 있다고 가정)
-// final List<String> imageitem = [...];
-
-// 공지사항 목록도 데이터로 분리
-final List<String> noticeItems = List.generate(10, (i) => '(${i+1}) [공지사항]');
+final List<String> carServiceTypes = ['대리', '택시', '똑타', '자가용']; <br>
+final List<String> carModels = ['아반떼', '소나타', 'sm5', '제네시스']; <br>
+final List<String> imageitem = [...]; <br>
+final List<String> noticeItems = List.generate(10, (i) => '(${i+1}) [공지사항]'); <br>
 </code>
   
 
