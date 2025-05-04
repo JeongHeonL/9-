@@ -211,7 +211,7 @@ class Page1 extends StatelessWidget{
    Page1 위젯 외부(또는 별도의 데이터 파일)에 화면에 표시될 데이터를 리스트 등의 형태로 정의합니다. <br>
 <br>
 <예시>
-</code>
+<code>
 // 예시: 별도의 데이터 파일 또는 Page1 클래스 외부
 final List<String> carServiceTypes = ['대리', '택시', '똑타', '자가용'];
 final List<String> carModels = ['아반떼', '소나타', 'sm5', '제네시스'];
