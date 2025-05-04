@@ -217,5 +217,7 @@ final List<String> carModels = ['아반떼', '소나타', 'sm5', '제네시스']
 final List<String> imageitem = [...]; <br>
 final List<String> noticeItems = List.generate(10, (i) => '(${i+1}) [공지사항]'); <br>
 </code>
-  
+이런식으로 코드를 짜면<br>
+데이터 변경이 쉽고 재사용하기 편하며 테스트할 때 빨리 할 수 있기 때문에 <br>
+값(데이터)과 값을 화면에 표현하는 로직을 구분하여 구현하는 것이 왜중요한가? 에 대한 답에 근접할 수 있음
 
